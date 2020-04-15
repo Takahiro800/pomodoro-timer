@@ -1,0 +1,23 @@
+.button_circle {
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  border-bottom: solid 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
+
+  text-align: center;
+}
+
+.button_circle:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
