@@ -52,7 +52,7 @@ html,body {
     font-size: 3em;
 }
 
-.button_circle {
+#button_circle {
     display: inline-block;
     width: 10em;
     height: 10em;
@@ -64,7 +64,7 @@ html,body {
     transition: .4s;
     text-align: center;
 }
-.button_circle:active {
+#button_circle:active {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
@@ -72,7 +72,7 @@ html,body {
   }
 
 
-.button_circle span {
+#button_circle span {
     margin: 0%;
     font-size: 250%;
     color: white;
