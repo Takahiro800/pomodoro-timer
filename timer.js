@@ -15,7 +15,7 @@ let Count_Down = ()=> {
 
   if (TIME < 0) {
     clearInterval(TIMER);
-    Swhich_Count();
+    //onとoffの切り替え
   }
 }
 //これを１秒ごとに更新する！
