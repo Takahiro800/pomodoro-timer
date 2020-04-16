@@ -11,3 +11,16 @@ function Count_Down() {
       clearInterval( TIMER );
 }
 }
+
+let is_odd_click = fales;
+
+function Click_Button() {
+  is_odd_click = !is_odd_click;
+
+  if (is_odd_click) {
+
+  }
+  else {
+
+  }
+};
