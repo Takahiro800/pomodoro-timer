@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="button_circle">
-      <p>BUTTON</p>
+    <div class="main">
+      <div class="article">
+        <div class="content">
+          <div class="time_box">
+            <span class="minute_shower"></span
+            ><span class="time_text">min</span>
+          </div>
+          <div class="time_box">
+            <span class="second_shower"></span
+            ><span class="time_text">sec</span>
+          </div>
+          <span class="time_status"></span>
+        </div>
+      </div>
+      <div class="article">
+        <div class="content">
+          <div class="button_circle" onclick="Click_Button()">
+            <p>BUTTON</p>
+          </div>
+        </div>
+      </div>
     </div>
+
     <p id="time_text"></p>
     <script type="text/javascript" src="timer.js"></script>
   </body>
