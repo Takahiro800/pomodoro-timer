@@ -5,6 +5,21 @@ let TIMER = setInterval(
   function() { Count_Down() }, ONE_MSEC);
 
 
+
+//カウントダウン
+let Count_Down = ()=> {
+  // ここで時間をHTMLに渡す
+  Count_Show(TIME);
+  //時間を減らす
+  TIME--;
+
+  if (TIME < 0) {
+    clearInterval(TIMER);
+    Swhich_Count();
+  }
+}
+//これを１秒ごとに更新する！
+
 // ボタン表示
   let Button_Status_Setter = (is_idle) => {
     const text = is_idle ? 'START' : 'CLEAR';
