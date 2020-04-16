@@ -1,10 +1,47 @@
-let TIME = 10;
-const ONE_MSEC = 1000;
+const WORK_TIME = 25 * 60;
+const BREAK_TIME = 5 * 60;
+const TEA_TIME = 30 * 60;
+const WORK_BREAK_SET =4;
+const CLOCK_MESC = 1000;
 
-let TIMER = setInterval(
-  function() { Count_Down() }, ONE_MSEC);
+let TIMER;
+let TIME = 0;
+let NOW_SET = 0;
+let IS_WORKIG = true;
+let IS_IDLE = true;
+
+let Init = () => {
+  NOW_SET = 0;
+  IS_WORKING =true;
+  TIME = WORK_TIME;
+  IS_IDLE = true;
+  if (TIMER) {
+    clearInterval(TIMER);
+  }
+  Count_Show(TIME);
+  Button_Status_Setter(IS_IDLE);
+
+}
+
+let Start = () => {
+  IS_IDLE = false;
+  Button_Status_Setter(IS_IDLE);
+  Timer_Setter(IS_WORKING);
+}
 
 
+let Clear = ()=>{
+  Init();
+}
+
+let Click_Button = ()=>{
+  if (IS_IDLE) {
+    Start();
+  }
+  else {
+    Clear();
+  }
+}
 
 //カウントダウン
 let Count_Down = ()=> {
@@ -44,6 +81,7 @@ let Count_Down = ()=> {
   let Swich_Count = ()=> {
     //on,offの切り替え
     IS_WORKING = !IS_WORKIG;
+    Timer_Setter(IS_WORKING);
 
   }
 
@@ -61,5 +99,7 @@ let Count_Down = ()=> {
         TIME = BREAK_TIME;
       }
     }
-    TIMER = serInterval(function() { Count_Down() }, CLOCK_MESC);
+    TIMER = setInterval(function() { Count_Down() }, CLOCK_MESC);
   }
+
+  Init();
